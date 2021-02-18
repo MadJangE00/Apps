@@ -3,16 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="antClicker.js" >
-
-    </script>
   </head>
   <body>
 <h1> World of Ants </h1>
 <button onclick="click()">start world</button>
 <input type="button" name="hello world" value="hello world">
-  </body>
-</html>
+
+<script src="antClicker.js" >
+function click() {
+  if (score === 0){
+    time = 5;
+    numAnt = numAnt + 1;
+    score = score + numAnt;
+    return {score, time, numAnt}
+  } else if (time > 0){
+    time = time - 1;
+    numAnt = numAnt + 1;
+    score = score + numAnt;
+    return {score, time, numAnt}
+  } else {
+    console.log("Game Over");
+    return {score, time, numAnt}
+  }
+  console.log(score, time, numAnt)
+}
+  document.write()
+</script>
+<script>
+
+</script>
 <p id="score"> score </p>
 
 
@@ -25,3 +44,7 @@ function myFunction() {
   document.getElementById("demo").innerHTML = "Hello World";
 }
 </script>
+
+
+</body>
+</html>
